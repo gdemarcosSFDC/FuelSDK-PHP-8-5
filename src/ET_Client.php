@@ -519,7 +519,7 @@ class ET_Client extends SoapClient
 	 * @param integer $one_way Future use
 	 * @return string Soap web service request result
 	 */			
-	function __doRequest(string $request, string $location, string $action, int $version, bool $oneWay = false): ?string
+	function __doRequest(string $request, string $location, string $action, int $version, bool $oneWay = false, ?string $uriParserClass = null): ?string
 	{
 		$doc = new DOMDocument();
 		$doc->loadXML($request);
