@@ -1,3 +1,8 @@
+# PHP 8.5
+* Package name `heroku-marketingcloud/fuelsdk-php-8-5`, still compatible with PHP 8.1
+* `ET_Client::__doRequest()` matches the PHP 8.5 `SoapClient` signature. Fix by Sean Fisher (srtfisher): https://github.com/bschoenSFDC/FuelSDK-PHP-8-1/pull/1
+* PHP 8.1 adaptations by bschoen (bschoenSFDC)
+
 # 1.1.0 (2017-10-19)
 * namespace integration in all source, test and sample code
 * composer autoload issue fix

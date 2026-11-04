@@ -5,6 +5,8 @@ Salesforce Marketing Cloud Fuel SDK for PHP
 
 > Salesforce Marketing Cloud Fuel SDK for PHP is free to use but are not official Salesforce Marketing Cloud products and should be considered community projects. This SDK is not officially tested or documented. For help on any Salesforce Marketing Cloud Fuel SDK for PHP, please consult the Salesforce message boards or the issues section of this repository. Salesforce Marketing Cloud support is not available for this SDK.
 
+This build runs on PHP 8.1 and PHP 8.5. The PHP 8.1 adaptations are by [bschoen](https://github.com/bschoenSFDC). The PHP 8.5 `SoapClient::__doRequest()` signature fix is by [Sean Fisher](https://github.com/srtfisher), from [bschoenSFDC/FuelSDK-PHP-8-1#1](https://github.com/bschoenSFDC/FuelSDK-PHP-8-1/pull/1).
+
 ## Overview ##
 The Fuel SDK for PHP provides easy access to Salesforce Marketic Cloud's Fuel API Family services, including a collection of REST and SOAP API. These APIs provide access to Salesforce Marketing Cloud (previously called ExactTarget) functionality via common collection types such as array/hash. 
 
@@ -97,7 +99,7 @@ In Addition to the OAuth2 feature added as part of Version 1.3.0, We have now ad
 * Added support for your tenant’s endpoints - [More Details](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/your-subdomain-tenant-specific-endpoints.htm)
 
 ## Requirements ##
-PHP Version >=5.6.24
+PHP Version >=8.1
 
 Extensions:
 - openssl
@@ -114,13 +116,13 @@ http://salesforce-marketingcloud.github.io/FuelSDK-PHP/index.html
 After downloading the project, rename the config.php.template file to config.php. Most importantly, you also need to download all dependencies manually and include accordingly. That's why we highly encourage to get it from composer.
 
 ### Composer
-Add a dependency to composer require salesforce-mc/fuel-sdk-php to the require section of your project's composer.json configuration file, and update your application.
+Add a dependency to composer require heroku-marketingcloud/fuelsdk-php-8-5 to the require section of your project's composer.json configuration file, and update your application.
 
 The following code is an example of a minimal composer.json file:
 <pre>
 {
     "require": {
-        "salesforce-mc/fuel-sdk-php": "1.3.0"
+        "heroku-marketingcloud/fuelsdk-php-8-5": "dev-main"
     }
 }
 </pre>
@@ -137,7 +139,7 @@ You can define your own REST, SOAP and Authentication base urls both in the conf
 ## Example Request ##
 All ExactTarget objects exposed through the Fuel SDK begin with be prefixed with "ET\_".  Start by working with the ET_List object:  
 
-Get the config.php.template file (under vendor/salesforce-mc/ using composer), rename it to config.php and update clientId & clientSecret.  
+Get the config.php.template file (under vendor/heroku-marketingcloud/fuelsdk-php-8-5/ using composer), rename it to config.php and update clientId & clientSecret.  
 Most importantly, put it in your project's root directory where composer.json file exists.  
 
 Add composer's auto generated autoload.php file, change the path according to your directory structure:
